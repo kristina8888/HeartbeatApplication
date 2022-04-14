@@ -27,7 +27,7 @@ public class DocDeskController {
 
     @GetMapping("/list")
     public String list(Model model) {
-        model.addAttribute("app_users", appUserRepository.findAllByType(1));
+        model.addAttribute("app_users", appUserRepository.findByTypeOrderByLastNameAsc(1));
 
         return "docdesk/list";
     }

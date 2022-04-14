@@ -30,6 +30,7 @@ public class AppUser {
 
     public AppUser() {
         generatePin();
+        setType(1);
     }
 
     public String getComments() {
