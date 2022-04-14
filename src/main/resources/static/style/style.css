@@ -16,6 +16,8 @@ h4 { font-weight: bold; }
 
 /*tr:nth-child(odd) {background-color: #eeeeee}*/
 
+.main-container { max-width: 1240px; margin: auto; padding: 0 20px; position: relative; }
+
 .m-top-80 { margin-top: 80px; }
 
 .alright { text-align: right; }
