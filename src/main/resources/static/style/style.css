@@ -4,9 +4,7 @@
 
 */ some additions to bootstrap */
 
-body { font-family: areal; font-size: 18px; }
-
-label { font-family: areal; font-size: 18px; }
+body, label { font-family: areal; font-size: 18px; }
 
 button { min-width: 110px; }
 
@@ -34,14 +32,9 @@ input { color: #121212; }
 .logout-wrapper { width: 220px; text-align: center; }
 
 
-/* if we'll need it
-@media only screen and (max-width: 850px) {
-.d-md-none { display: none !important; }
-}
-*/
 
-@media screen and (max-width:320px) {
-    body {
-            min-height: 1110px !important;
-    }
+@media only screen and (max-width: 850px) {
+    body, label { font-size: 150% !important; }
+    .main-container { width: 100%; }
+
 }
