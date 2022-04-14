@@ -26,18 +26,12 @@ public class PatientsHealthRecordsController {
         if(user == null)
             return "redirect:/";
 
+        System.out.println("Listing records for pratient ...");
+
         model.addAttribute("records", healthRecordRepository.findAllByAppUserId(user.getId()));
-        model.addAttribute("user", user); // empty user for adding new
-        model.addAttribute("record", new HealthRecord()); // empty user for adding new
+        model.addAttribute("user", user);
+        model.addAttribute("record", new HealthRecord());
 
         return "patient/patients_health_records";
-    }
-
-    @GetMapping("/listRecordsForPatients")
-    public String listRecordsForPatients(Model model) {
-        System.out.println("Listing all records ...");
-        model.addAttribute("records", healthRecordRepository.findAll());
-
-        return "redirect:/list";
     }
 }

@@ -34,7 +34,6 @@ public class TelemedLoginPageController {
             return "telemed_login_page";
         }
 
-
         System.out.println("korisnik postoji, email: " + eMail + " pwd: " + password);
 
         session.setAttribute("user", user);
