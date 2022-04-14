@@ -32,9 +32,10 @@ input { color: #121212; }
 .logout-wrapper { width: 220px; text-align: center; }
 
 
-
+/*
 @media only screen and (max-width: 900px) {
     body, label { font-size: 150% !important; }
     .main-container { width: 100%; }
 
 }
+*/
