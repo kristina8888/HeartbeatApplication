@@ -19,7 +19,7 @@ import java.util.Date;
 @RunWith(SpringRunner.class)
 @DataJpaTest
 @Log
-public class HeartbeatApplicationRepositoryIntegrationTest {
+public class HeartbeatApplicationRepositoryIntegrationTests {
 
     @Autowired
     HealthRecordRepository healthRecordRepository;
@@ -29,7 +29,7 @@ public class HeartbeatApplicationRepositoryIntegrationTest {
 
     @Test
     public void testFindUserByID() {
-        log.info("Test FindByID executing.");
+        log.info("Testiranje konekcije sa bazom");
 
         //given
         Date startTest = new Date();
@@ -45,19 +45,20 @@ public class HeartbeatApplicationRepositoryIntegrationTest {
     }
 
     @Test
-    public void testFindRecordByHeartBeat() {
-        log.info("Test FindByHeartBeat executing.");
+    public void testFindRecordByRecordWithAppUser() {
+        log.info("Testiranje konekcije između AppUsera i HealthRecorda");
 
         //given
-        Date startTest = new Date();
-        HealthRecord newRecord = new HealthRecord(150);
-        newRecord.setDateOfInput(startTest);
+        AppUser newUser = new AppUser("Goran", "Jović");
+        appUserRepository.save(newUser);
+
+        HealthRecord newRecord = new HealthRecord(newUser);
         healthRecordRepository.save(newRecord);
 
         // when
-        HealthRecord foundRecord = healthRecordRepository.findByHeartBeat(150);
+        HealthRecord foundRecord = healthRecordRepository.findAllByAppUserId(newUser.getId()).get(0);
 
         // then
-        Assert.assertEquals(foundRecord.getDateOfInput().getTime(), startTest.getTime());
+        Assert.assertEquals(foundRecord.getAppUser().getFirstName(), "Goran");
     }
 }

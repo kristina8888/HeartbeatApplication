@@ -27,6 +27,10 @@ public class AppUser {
     private int type;
     private String pin;
 
+    public AppUser(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 
     public AppUser() {
         generatePin();
