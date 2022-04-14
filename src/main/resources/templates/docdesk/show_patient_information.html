@@ -57,20 +57,28 @@
                         </div>
                     </tr>
                     <tr th:each="user : ${app_users}">
-                        <div class="text-start">
+                        <div class="text-start mt-4">
+
+                            <div class="mb-2">
                             <th><strong>Datum rođenja: </strong></th>
-                                <th th:text="${#dates.format(user.dateOfBirth, 'dd.MM.yyyy')}"></th>
-                                <br>
-                                <th><strong>E-pošta:</strong></th>
-                                <th th:text="${user.eMail}"></th>
-                                <br>
-                                <th><strong>Telefon/Mobitel:</strong></th>
-                                <th th:text="${user.phoneNumber}"></th>
-                                <br>
-                                <th><strong>Doktorove bilješke:</strong></th>
-                                <th th:text="${user.comments}"></th>
-                                <br>
+                            <th th:text="${#dates.format(user.dateOfBirth, 'dd.MM.yyyy')}"></th>
                             </div>
+
+                            <div class="mb-2">
+                            <th><strong>E-pošta:</strong></th>
+                            <th th:text="${user.eMail}"></th>
+                            </div>
+
+                            <div class="mb-2">
+                            <th><strong>Telefon/Mobitel:</strong></th>
+                            <th th:text="${user.phoneNumber}"></th>
+                            </div>
+
+
+                            <th><strong>Doktorove bilješke:</strong></th>
+                            <th th:text="${user.comments}"></th>
+
+                        </div>
                         </div>
                     </tr>
                 </div>
