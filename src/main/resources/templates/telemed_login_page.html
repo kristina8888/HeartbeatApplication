@@ -10,26 +10,18 @@
     <link rel="stylesheet" type="text/css" th:href="@{/style/style.css}">
 </head>
 <body class="container">
-<div class="col-12">
-    <div class="row">
-        <div class="col-lg-3 d-sm-none d-md-none d-lg-block text-end"></div>
-        <div class="col-lg-6 col-12">
-            <div class="justify text-center">
-                <img class="mt-5 mb-5" th:src="@{/img/welcome-small.jpg}" />
-                <p class="mb-3"><b>Prijavite se za nastavak</b></p>
-                <p th:if="${errorMsg}" th:text="${errorMsg}"></p>
-                <form action="/login" method="post">
-                    <p class="mb-3">E-Mail:</p>
-                    <input name="eMail" class="col-xl-3 col-lg-4 col-md-5 col-sm-5 min-w-200 text-center mb-3" placeholder="E-Mail"/>
-                    <p class="mb-3">Password:</p>
-                    <input name="password" type="password" class="col-xl-3 col-lg-4 col-md-5 col-sm-5 min-w-200 text-center mb-5" placeholder="Password"/>
-                    <br>
-                    <button type="submit" class="btn mb-5 btn-danger"><b>PRIJAVA</b></button>
-                </form>
-            </div>
-        </div>
-        <div class="col-lg-3 d-sm-none d-md-none d-lg-block justify text-start"></div>
+    <div class="col-12 justify text-center m-top-80">
+        <img class="mt-5 mb-5" th:src="@{/img/welcome-small.jpg}" />
+        <p class="mb-3"><b>Prijavite se za nastavak</b></p>
+        <p th:if="${errorMsg}" th:text="${errorMsg}"></p>
+        <form action="/login" method="post">
+            <p class="mb-3">E-Mail:</p>
+            <input name="eMail" class="col-xl-3 col-lg-4 col-md-5 col-sm-5 min-w-200 text-center mb-3" placeholder="E-Mail"/>
+            <p class="mb-3">Password:</p>
+            <input name="password" type="password" class="col-xl-3 col-lg-4 col-md-5 col-sm-5 min-w-200 text-center mb-5" placeholder="Password"/>
+            <br>
+            <button type="submit" class="btn mb-5 btn-danger"><b>PRIJAVA</b></button>
+        </form>
     </div>
-</div>
 </body>
 </html>
