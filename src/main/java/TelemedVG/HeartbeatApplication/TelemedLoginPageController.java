@@ -24,7 +24,7 @@ public class TelemedLoginPageController {
         return "telemed_login_page";
     }
 
-    @GetMapping("/login")
+    @RequestMapping("/login")
     public String processLogin(String eMail, String password, HttpSession session, Model model) {
         AppUser user = appUserRepository.findByeMail(eMail);
         System.out.println("usao u login page, trazi " + eMail + " + " + password);

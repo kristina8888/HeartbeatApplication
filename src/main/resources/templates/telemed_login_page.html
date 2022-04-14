@@ -18,7 +18,7 @@
                 <img class="mt-5 mb-5" th:src="@{/img/welcome-small.jpg}" />
                 <p class="mb-3"><b>Prijavite se za nastavak</b></p>
                 <p th:if="${errorMsg}" th:text="${errorMsg}"></p>
-                <form action="/login">
+                <form action="/login" method="post">
                     <p class="mb-3">E-Mail:</p>
                     <input name="eMail" class="col-xl-3 col-lg-4 col-md-5 col-sm-5 min-w-200 text-center mb-3" placeholder="E-Mail"/>
                     <p class="mb-3">Password:</p>
