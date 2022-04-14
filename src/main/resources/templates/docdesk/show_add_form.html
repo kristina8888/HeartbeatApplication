@@ -47,14 +47,14 @@
                         <div class="col-lg-4 col-2">
                         </div>
                         <tr th:each="user : ${user}">
-                            <div class="form-check form-check-inline">
+                            <div hidden class="form-check form-check-inline">
                                 <input class="form-check-input" th:field="${user.type}" type="radio" name="1" id="1"
                                        value="1">
                                 <label class="form-check-label mb-3" for="1">
                                     PACIJENT
                                 </label>
                             </div>
-                            <div class="form-check form-check-inline">
+                            <div hidden class="form-check form-check-inline">
                                 <input class="form-check-input" th:field="${user.type}" type="radio" name="2" id="2"
                                        value="2" disabled>
                                 <label class="form-check-label mb-3" for="2">
